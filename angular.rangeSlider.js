@@ -160,8 +160,8 @@
                     '<div class="ngrs-value-runner">',
                     '<div class="ngrs-label ngrs-label-min" ng-show="showLabels"><div>{{min}}</div></div>',
                     '<div class="ngrs-label ngrs-label-max" ng-show="showLabels"><div>{{max}}</div></div>',
-                    '<div class="ngrs-value ngrs-value-min" ng-show="showValues && pinHandle !== \"max\""><div>{{filteredModelMin}}</div></div>',
-                    '<div class="ngrs-value ngrs-value-max" ng-show="showValues && pinHandle !== \"min\""><div>{{filteredModelMax}}</div></div>',
+                    '<div class="ngrs-value ngrs-value-min" ng-show="showValues && pinHandle !== \'min\'"><div>{{filteredModelMin}}</div></div>',
+                    '<div class="ngrs-value ngrs-value-max" ng-show="showValues && pinHandle !== \'max\'"><div>{{filteredModelMax}}</div></div>',
                     '</div>',
                     '</div>'
                 ].join(''),

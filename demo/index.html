@@ -28,20 +28,20 @@ $scope.demo1 = {
     min: 20,
     max: 80
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span5">
 				<h4>Default slider</h4>
 
 				<div range-slider min="0" max="100" model-min="demo1.min" model-max="demo1.max"></div>
-				
+
 			</div>
 			<div class="span2"></div>
 			<div class="span5">
 				<h4>Vertical slider</h4>
 
 				<div range-slider orientation="vertical" min="0" max="100" model-min="demo1.min" model-max="demo1.max"></div>
-				
+
 			</div>
 			<div class="span5">
 <pre>&lt;div range-slider min="0" max="100" model-min="demo1.min" model-max="demo1.max"&gt;&lt;/div&gt;</pre>
@@ -71,13 +71,13 @@ $scope.demo2 = {
     minPrice: 1000,
     maxPrice: 4000
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span5">
 				<h4>The slider</h4>
-				
+
 				<div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" filter="currency:'$'" step="100"></div>
-				
+
 			</div>
 			<div class="span2"></div>
 			<div class="span5">
@@ -86,10 +86,10 @@ $scope.demo2 = {
 				<pre>&lt;div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" filter="currency:'$'" step="100"&gt;&lt;/div&gt;</pre>
 
 			</div>
-			
+
 
 		</div>
-		
+
 		<hr />
 
 		<div class="row">
@@ -104,13 +104,13 @@ $scope.demo3 = {
     max: 1000,
     disabled: false
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span12">
 				<h4>The slider</h4>
 
 				<div range-slider min="demo3.rangeMin" max="demo3.rangeMax" model-min="demo3.min" model-max="demo3.max" disabled="demo3.disabled"></div>
-				
+
 				<button class="btn" ng-click="toggleDemo3()">Toggle Disabled State</button>
 			</div>
 
@@ -127,7 +127,7 @@ $scope.demo4 = {
     min: 300,
     max: 800
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span5">
 				<h4>Left-aligned</h4>
@@ -135,7 +135,7 @@ $scope.demo4 = {
 					<div range-slider orientation="vertical left" min="0" max="1000" model-min="demo4.min" model-max="demo4.max"></div>
 				</div>
 			</div>
-			
+
 			<div class="span5 pull-right">
 				<h4>Right-aligned</h4>
 				<div class="well">
@@ -148,7 +148,7 @@ $scope.demo4 = {
 
 				<pre>&lt;div range-slider orientation="vertical left" min="0" max="1000" model-min="demo4.min" model-max="demo4.max"&gt;&lt;/div&gt;</pre>
 			</div>
-			
+
 			<div class="span5 pull-right">
 				<h4>The HTML</h4>
 
@@ -156,7 +156,7 @@ $scope.demo4 = {
 			</div>
 
 		</div>
-		
+
 		<hr />
 
 		<div class="row">
@@ -168,7 +168,7 @@ $scope.demo5 = {
     min: 80,
     max: 1000
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span12">
 				<h4>The slider</h4>
@@ -192,7 +192,7 @@ $scope.demo6 = {
     valueA: 5000,
     valueB: 3000
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span12">
 				<h4>The sliders</h4>
@@ -222,15 +222,15 @@ $scope.demo7 = {
     minPrice: 1000,
     maxPrice: 4000
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span5">
 				<h4>The slider</h4>
-				
+
 				<p>You can prevent the two values from being equal by using the <code>prevent-equal-min-max="true"</code> attribute. The <code>step</code> value is used to maintain a gap between the values, so if the <code>step</code> is set to <code>100</code> the minimum difference will be 100. If no <code>step</code> value is provided a minimum difference of <code>1</code> will be used.</p>
 
 				<div range-slider min="demo7.range.min" max="demo7.range.max" model-min="demo7.minPrice" model-max="demo7.maxPrice" step="100" prevent-equal-min-max="true"></div>
-				
+
 			</div>
 			<div class="span2"></div>
 			<div class="span5">
@@ -239,7 +239,7 @@ $scope.demo7 = {
 				<pre>&lt;div range-slider min="demo2.range.min" max="demo2.range.max" model-min="demo2.minPrice" model-max="demo2.maxPrice" step="100" prevent-equal-min-max="true"&gt;&lt;/div&gt;</pre>
 
 			</div>
-			
+
 
 		</div>
 
@@ -254,12 +254,12 @@ $scope.demo8 = {
     max: 5000,
     min: 3000
 };</pre>
-			</div>			
+			</div>
 
 			<div class="span12">
 				<h4>The slider</h4>
 				<p>You can make the values move with the handles as they slide by setting <code>attach-handle-values</code> to true.</p>
-				<div range-slider min="0" max="10000" model-min="demo8.min" model-max="demo8.max" attach-handle-values="true"></div>
+				<div range-slider min="0" max="10000" model-min="demo8.min" model-max="demo8.max" pin-handle="min" attach-handle-values="true"></div>
 			</div>
 			<div class="span12">
 				<h4>The HTML</h4>
