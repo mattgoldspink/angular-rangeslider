@@ -170,7 +170,8 @@
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFdJREFUeNpiYEAAHyDmYkADzEhsByBWA+K3QPwJmwJjIGYBYlUgZgLi59gUwIAkEEsD8VMmBtyAkQFqJDZwAYjPAPE/dAU/gHg/ED/GpgvkTW50QYAAAwADfwrM5sqplgAAAABJRU5ErkJggg==");
 }
 /* line 137, scss/_rangeSlider.scss */
-.ngrs-range-slider .ngrs-value {
+.ngrs-range-slider .ngrs-value,
+.ngrs-range-slider .ngrs-label {
   position: absolute;
   top: 100%;
   left: 0;
@@ -178,17 +179,19 @@
   font-size: 12px;
   color: #999;
 }
-/* line 145, scss/_rangeSlider.scss */
-.ngrs-range-slider .ngrs-value.ngrs-value-max {
+/* line 146, scss/_rangeSlider.scss */
+.ngrs-range-slider .ngrs-value.ngrs-value-max, .ngrs-range-slider .ngrs-value.ngrs-label-max,
+.ngrs-range-slider .ngrs-label.ngrs-value-max,
+.ngrs-range-slider .ngrs-label.ngrs-label-max {
   left: auto;
   right: 0;
   text-align: right;
 }
-/* line 152, scss/_rangeSlider.scss */
+/* line 154, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-handle-min-down .ngrs-value-min, .ngrs-range-slider.ngrs-handle-max-down .ngrs-value-max {
   color: #333;
 }
-/* line 160, scss/_rangeSlider.scss */
+/* line 162, scss/_rangeSlider.scss */
 .ngrs-range-slider .ngrs-attached-handles {
   margin: 0 9px;
   position: relative;
@@ -196,15 +199,17 @@
       ATTACHED VALUE RUNNER LABELS
   \*------------------------------------*/
 }
-/* line 167, scss/_rangeSlider.scss */
-.ngrs-range-slider .ngrs-attached-handles .ngrs-value {
+/* line 169, scss/_rangeSlider.scss */
+.ngrs-range-slider .ngrs-attached-handles .ngrs-value,
+.ngrs-range-slider .ngrs-attached-handles .ngrs-label {
   text-align: left;
 }
-/* line 172, scss/_rangeSlider.scss */
-.ngrs-range-slider .ngrs-attached-handles .ngrs-value > div {
+/* line 175, scss/_rangeSlider.scss */
+.ngrs-range-slider .ngrs-attached-handles .ngrs-value > div
+.ngrs-label > div {
   margin: 0 0 0 -50%;
 }
-/* line 181, scss/_rangeSlider.scss */
+/* line 185, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical {
   width: 28px;
   margin: 10px auto;
@@ -233,13 +238,13 @@
       VERTICAL RIGHT SLIDER
   \*------------------------------------*/
 }
-/* line 189, scss/_rangeSlider.scss */
+/* line 193, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-runner {
   margin: 9px 0;
   height: 300px;
   width: 18px;
 }
-/* line 199, scss/_rangeSlider.scss */
+/* line 203, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-value-runner.ngrs-attached-handles {
   position: absolute;
   top: 0;
@@ -247,7 +252,7 @@
   bottom: 0;
   margin: 9px 0;
 }
-/* line 212, scss/_rangeSlider.scss */
+/* line 216, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-join {
   width: 8px;
   height: auto;
@@ -257,100 +262,112 @@
   right: auto;
   margin: 0 0 0 -4px;
 }
-/* line 226, scss/_rangeSlider.scss */
+/* line 230, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-handle {
   width: 100%;
   height: 18px;
   margin: -9px 0 0 0;
 }
-/* line 237, scss/_rangeSlider.scss */
+/* line 241, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-handle-min i {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFFJREFUeNpiYEAFPFAMB0xIbEYgdoJiRpggM5ICUyBWhZoA0vgMWYEsENsg6ZQE4ldA/AmkkguIHZGNhQKQGBfIBHcgFmTABCxALMJAMQAIMAAcNgVQJ7t7JQAAAABJRU5ErkJggg==");
 }
-/* line 244, scss/_rangeSlider.scss */
+/* line 248, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-handle-max i {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpiYKAUMAKxDxBL4ZB/xgQk9gHxDyySILF9zEDiNxC/A2JVNAW7gfgtM5TzCYhZgFgCyr8IxNdADGZk+4BYGoi/APEBIP6PzVE8UAwHAAEGAArIDvzRFIA6AAAAAElFTkSuQmCC");
 }
-/* line 254, scss/_rangeSlider.scss */
-.ngrs-range-slider.ngrs-vertical .ngrs-value {
+/* line 258, scss/_rangeSlider.scss */
+.ngrs-range-slider.ngrs-vertical .ngrs-value,
+.ngrs-range-slider.ngrs-vertical .ngrs-label {
   top: 0;
   left: 100%;
   padding: 0 0 0 5px;
 }
-/* line 259, scss/_rangeSlider.scss */
-.ngrs-range-slider.ngrs-vertical .ngrs-value.ngrs-value-max {
+/* line 264, scss/_rangeSlider.scss */
+.ngrs-range-slider.ngrs-vertical .ngrs-value.ngrs-value-max
+.ngrs-range-slider.ngrs-vertical .ngrs-value.ngrs-label-max,
+.ngrs-range-slider.ngrs-vertical .ngrs-label.ngrs-value-max
+.ngrs-range-slider.ngrs-vertical .ngrs-value.ngrs-label-max, .ngrs-range-slider.ngrs-vertical .ngrs-value.ngrs-value-max
+.ngrs-range-slider.ngrs-vertical .ngrs-label.ngrs-label-max,
+.ngrs-range-slider.ngrs-vertical .ngrs-label.ngrs-value-max
+.ngrs-range-slider.ngrs-vertical .ngrs-label.ngrs-label-max {
   top: auto;
   bottom: 0;
   right: auto;
   text-align: left;
 }
-/* line 269, scss/_rangeSlider.scss */
+/* line 275, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical .ngrs-attached-handles .ngrs-value > div {
   margin: -50% 0 0 0;
 }
-/* line 279, scss/_rangeSlider.scss */
+/* line 285, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical.ngrs-left {
   margin: 10px 0;
 }
-/* line 287, scss/_rangeSlider.scss */
+/* line 293, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical.ngrs-right {
   margin: 10px 0 10px auto;
   /*------------------------------------*\
       VALUE LABELS
   \*------------------------------------*/
 }
-/* line 294, scss/_rangeSlider.scss */
-.ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value {
+/* line 300, scss/_rangeSlider.scss */
+.ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value
+.ngrs-label {
   left: auto;
   right: 100%;
   padding: 0 5px 0 0;
   text-align: right;
 }
-/* line 300, scss/_rangeSlider.scss */
-.ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value.ngrs-value-max {
+/* line 307, scss/_rangeSlider.scss */
+.ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value
+.ngrs-label.ngrs-value-max
+.ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value
+.ngrs-label.ngrs-label-max {
   text-align: right;
 }
-/* line 306, scss/_rangeSlider.scss */
+/* line 314, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-vertical.ngrs-right .ngrs-value-runner.ngrs-attached-handles {
   left: 0;
 }
-/* line 318, scss/_rangeSlider.scss */
+/* line 326, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-focus {
   border-color: rgba(82, 168, 236, 0.8);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/* line 329, scss/_rangeSlider.scss */
+/* line 337, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-disabled, .ngrs-range-slider.ngrs-disabled.ngrs-focus {
   border-color: #ddd;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 335, scss/_rangeSlider.scss */
+/* line 343, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-disabled .ngrs-handle {
   background: #fff;
   border-color: #ddd;
 }
-/* line 339, scss/_rangeSlider.scss */
+/* line 347, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-disabled .ngrs-handle i {
   background: none !important;
   cursor: default;
 }
-/* line 345, scss/_rangeSlider.scss */
+/* line 353, scss/_rangeSlider.scss */
 .ngrs-range-slider.ngrs-disabled .ngrs-join {
   background: #ddd;
 }
-/* line 349, scss/_rangeSlider.scss */
-.ngrs-range-slider.ngrs-disabled .ngrs-value {
+/* line 357, scss/_rangeSlider.scss */
+.ngrs-range-slider.ngrs-disabled .ngrs-value,
+.ngrs-range-slider.ngrs-disabled .ngrs-label {
   color: #ddd;
 }
 
 /*------------------------------------*\
     TOUCH STATE
 \*------------------------------------*/
-/* line 361, scss/_rangeSlider.scss */
+/* line 370, scss/_rangeSlider.scss */
 body.ngrs-touching {
   -ms-touch-action: none;
 }

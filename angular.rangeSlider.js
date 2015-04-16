@@ -1,6 +1,6 @@
 /*
  *  Angular RangeSlider Directive
- * 
+ *
  *  Version: 0.0.13
  *
  *  Author: Daniel Crisp, danielcrisp.com
@@ -58,6 +58,7 @@
                     step: 0,
                     decimalPlaces: 0,
                     showValues: true,
+                    showLabels: true,
                     preventEqualMinMax: false,
                     attachHandleValues: false
                 },
@@ -126,6 +127,7 @@
                     filter: '@',
                     filterOptions: '@',
                     showValues: '@',
+                    showLabels: '@',
                     pinHandle: '@',
                     preventEqualMinMax: '@',
                     attachHandleValues: '@'
@@ -156,8 +158,10 @@
                     '<div class="ngrs-join"></div>',
                     '</div>',
                     '<div class="ngrs-value-runner">',
-                    '<div class="ngrs-value ngrs-value-min" ng-show="showValues"><div>{{filteredModelMin}}</div></div>',
-                    '<div class="ngrs-value ngrs-value-max" ng-show="showValues"><div>{{filteredModelMax}}</div></div>',
+                    '<div class="ngrs-label ngrs-label-min" ng-show="showLabels"><div>{{min}}</div></div>',
+                    '<div class="ngrs-label ngrs-label-max" ng-show="showLabels"><div>{{max}}</div></div>',
+                    '<div class="ngrs-value ngrs-value-min" ng-show="showValues && pinHandle !== \"max\""><div>{{filteredModelMin}}</div></div>',
+                    '<div class="ngrs-value ngrs-value-max" ng-show="showValues && pinHandle !== \"min\""><div>{{filteredModelMax}}</div></div>',
                     '</div>',
                     '</div>'
                 ].join(''),
@@ -171,6 +175,7 @@
                     var $slider = angular.element(element),
                         handles = [element.find('.ngrs-handle-min'), element.find('.ngrs-handle-max')],
                         values = [element.find('.ngrs-value-min'), element.find('.ngrs-value-max')],
+                        labels = [element.find('.ngrs-label-min'), element.find('.ngrs-label-max')],
                         join = element.find('.ngrs-join'),
                         pos = 'left',
                         posOpp = 'right',
@@ -240,6 +245,18 @@
                                 scope.showValues = false;
                             } else {
                                 scope.showValues = true;
+                            }
+                        }
+                    });
+
+                    attrs.$observe('showLabels', function(val) {
+                        if (!angular.isDefined(val)) {
+                            scope.showLabels = defaults.showLabels;
+                        } else {
+                            if (val === 'false') {
+                                scope.showLabels = false;
+                            } else {
+                                scope.showLabels = true;
                             }
                         }
                     });
