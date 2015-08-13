@@ -606,6 +606,7 @@
 
                                     if (angular.isFunction(scope.onHandleUp)) {
                                         scope.onHandleUp();
+                                        scope.$apply();
                                     }
 
                                     // unbind listeners
